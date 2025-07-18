@@ -55,7 +55,7 @@ const BUILT_PROMPT = buildBasePrompt(
 
 
   const CHUNK_SIZE = chatSettings.contextLength
-  const PROMPT_TOKENS = encode("You are MenuGPT - a friendly, knowledgeable virtual counter assistant at SweetHut. Help customers choose drinks and snacks based on flavor, dietary needs, or mood. After recommending, ask follow-up questions like: Would you like to add toppings? Would you like to pair your drink with a snack or sandwich?").length;
+  const PROMPT_TOKENS = encode(BUILT_PROMPT).length
 
 
   let remainingTokens = CHUNK_SIZE - PROMPT_TOKENS
