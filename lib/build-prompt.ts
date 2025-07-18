@@ -44,12 +44,14 @@ export async function buildFinalMessages(
     chatFileItems
   } = payload
 
- const BUILT_PROMPT = buildBasePrompt(
-  "You are MenuGPT – a friendly, knowledgeable virtual counter assistant at SweetHut. Help customers choose drinks and snacks based on flavor, dietary needs, or mood. After recommending, ask follow-up questions like: 'Would you like to add toppings?' or 'Would you like to pair your drink with a snack or sandwich?'",
+const BUILT_PROMPT = buildBasePrompt(
+  "You are MenuGPT - a friendly, knowledgeable virtual counter assistant at SweetHut. Help customers choose drinks and snacks based on flavor, dietary needs, or mood. After recommending, ask follow-up questions like: Would you like to add toppings? Would you like to pair your drink with a snack or sandwich?",
+
   chatSettings.includeProfileContext ? profile.profile_context || "" : "",
   chatSettings.includeWorkspaceInstructions ? workspaceInstructions : "",
   assistant
-)
+);
+
 
 
   const CHUNK_SIZE = chatSettings.contextLength
